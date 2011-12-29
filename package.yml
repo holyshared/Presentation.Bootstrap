@@ -1,0 +1,28 @@
+name: "Presentation.Bootstrap"
+
+web: "[http://sharedhat.com](http://sharedhat.com)"
+
+description: ""
+
+authors: "[Noritaka Horio](http://sharedhat.com)"
+
+license: "[MIT License](http://holyshared.github.com/Presentation.Bootstrap/license.txt)"
+
+copyright: "&copy; [Noritaka Horio](http://sharedhat.com)"
+
+sources:
+  - "Source/Core/Bootstrap.js"
+  - "Source/Module/Filter.js"
+  - "Source/Module/Helper.js"
+
+author: Noritaka Horio
+
+category: Widgets
+
+tags: [utils, slide, presentation, bootstrap]
+
+current: 1.0
+
+#docs: http://holyshared.github.com/Mixin/docs
+
+demo: http://holyshared.github.com/Presentation.Bootstrap/
