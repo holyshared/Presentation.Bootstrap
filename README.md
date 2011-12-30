@@ -91,6 +91,7 @@ A title, initial setting, and the processing to perform are specified.
 			var bootstrapper = this;
 
 			if (!Type.isObject(configuration)){
+				bootstrapper.failure();
 				return;
 			}
 
@@ -118,12 +119,15 @@ php packager build Presentation.Bootstrap/Core Presentation.Bootstrap/Module > p
 
 ### A filter module is included.
 
-php packager build Presentation.Bootstrap/Core Presentation.Bootstrap/Filter > presentation-standard.js
+php packager build Presentation.Bootstrap/Filter > presentation-standard.js
 
 ### A helper module is included.
 
-php packager build Presentation.Bootstrap/Core Presentation.Bootstrap/Helper > presentation-standard.js
+php packager build Presentation.Bootstrap/Keyboard > presentation-standard.js
+php packager build Presentation.Bootstrap/Controller > presentation-standard.js
+php packager build Presentation.Bootstrap/Page > presentation-standard.js
+php packager build Presentation.Bootstrap/Swipe > presentation-standard.js
 
 ### All the modules are included.
 
-php packager build Presentation.Bootstrap/Core Presentation.Bootstrap/Filter Presentation.Bootstrap/Helper > presentation-standard.js
+php packager build Presentation.Bootstrap/Filter Presentation.Bootstrap/Keyboard Presentation.Bootstrap/Controller Presentation.Bootstrap/Page Presentation.Bootstrap/Swipe > presentation-standard.js
