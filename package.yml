@@ -13,7 +13,7 @@ copyright: "&copy; [Noritaka Horio](http://sharedhat.com)"
 sources:
   - "Source/Core/Bootstrap.js"
   - "Source/Module/Filter.js"
-  - "Source/Module/Helper.js"
+  - "Source/Module/Keyboard.js"
 
 author: Noritaka Horio
 
