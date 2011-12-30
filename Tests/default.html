@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/asset/presentation-bootstrap/css/content.css" />
-<script type="text/javascript" src="/depender/build?require=Core/$,Core/Element.Event,Core/Element.Style,Presentation.Bootstrap/Filter,Presentation.Bootstrap/Keyboard"></script>
+<script type="text/javascript" src="/depender/build?require=Core/$,Core/Element.Event,Core/Element.Style,Presentation.Bootstrap/Filter,Presentation.Bootstrap/Keyboard,Presentation.Bootstrap/Swipe,Presentation.Bootstrap/Controller,Presentation.Bootstrap/Page"></script>
 <script type="text/javascript" src="/asset/presentation-bootstrap/js/default.js"></script>
 
 <div id="presentation">
@@ -8,6 +8,19 @@
 		<div data-presentation-role="content">content1</div>
 		<div data-presentation-role="content">content2</div>
 		<div data-presentation-role="content">content3</div>
+	</div>
+
+	<div class="controller">
+		<p>
+			<input type="button" name="first" value="first" class="first" />
+			<input type="button" name="prev" value="prev" class="prev" />
+			<input type="button" name="next" value="next" class="next" />
+			<input type="button" name="last" value="last" class="last" />
+		</p>
+	</div>
+
+	<div class="page">
+		<p><span class="current">1</span> / <span class="total">1</span></p>
 	</div>
 
 </div>

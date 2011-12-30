@@ -1,6 +1,6 @@
 /*
 ---
-name: Bootstrap.Filter
+name: Bootstrap.Controller
 
 description: 
 
@@ -11,41 +11,40 @@ authors:
 
 requires:
   - Presentation.Bootstrap/Module
-  - Presentation/Filter
+  - Presentation/Helper.Page
 
 provides:
-  - Filter
+  - Page
 ...
 */
 
-(function(Module){
+(function(Module, Helper){
 
 /*
 	var bootstrap = new Moostrap('sync', Presentation.Bootstrap.Module, {
 		configurations: {
-			filters: [filter1, filter2, filter3]
+			page: {
+				//page helper configuration
+			}
 		}
 	});
 	bootstrap.execute(presentation);
 */
-Module.register('filters', {
+Module.register('page', {
 
-	title: 'setup of filter',
-
-	configuration: [],
+	title: 'setup of page helper',
 
 	handler: function(presentation, configuration){
-		var bootstrapper = this;
+		var bootstrapper = this,
+			helper = null;
 
-		if (!Type.isArray(configuration)){
-			bootstrapper.success();
-			return;
+		if (!Type.isObject(configuration)){
+			configuration = {};
 		}
 
 		try {
-			configuration.each(function(filter){
-				presentation.addFilter(filter);
-			});
+			helper = new Helper.Page(configuration);
+			presentation.addHelper(helper);
 		} catch(exception){
 			throw exception;
 			bootstrapper.failure();
@@ -55,4 +54,4 @@ Module.register('filters', {
 
 });
 
-}(Presentation.Bootstrap.Module));
+}(Presentation.Bootstrap.Module, Presentation.Helper));

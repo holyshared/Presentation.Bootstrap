@@ -1,6 +1,6 @@
 /*
 ---
-name: Bootstrap.Filter
+name: Bootstrap.Swipe
 
 description: 
 
@@ -11,41 +11,39 @@ authors:
 
 requires:
   - Presentation.Bootstrap/Module
-  - Presentation/Filter
+  - Presentation/Helper.Swipe
 
 provides:
-  - Filter
+  - Swipe
 ...
 */
 
-(function(Module){
+(function(Module, Helper){
 
 /*
 	var bootstrap = new Moostrap('sync', Presentation.Bootstrap.Module, {
 		configurations: {
-			filters: [filter1, filter2, filter3]
+			swipable: true
 		}
 	});
 	bootstrap.execute(presentation);
 */
-Module.register('filters', {
+Module.register('swipable', {
 
-	title: 'setup of filter',
-
-	configuration: [],
+	title: 'setup of swipe helper',
 
 	handler: function(presentation, configuration){
-		var bootstrapper = this;
+		var bootstrapper = this,
+			helper = null;
 
-		if (!Type.isArray(configuration)){
+		if (!Type.isBoolean(configuration) || configuration === false){
 			bootstrapper.success();
 			return;
 		}
 
 		try {
-			configuration.each(function(filter){
-				presentation.addFilter(filter);
-			});
+			helper = new Helper.Swipe();
+			presentation.addHelper(helper);
 		} catch(exception){
 			throw exception;
 			bootstrapper.failure();
@@ -55,4 +53,4 @@ Module.register('filters', {
 
 });
 
-}(Presentation.Bootstrap.Module));
+}(Presentation.Bootstrap.Module, Presentation.Helper));

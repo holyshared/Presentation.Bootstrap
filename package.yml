@@ -14,6 +14,9 @@ sources:
   - "Source/Core/Bootstrap.js"
   - "Source/Module/Filter.js"
   - "Source/Module/Keyboard.js"
+  - "Source/Module/Controller.js"
+  - "Source/Module/Page.js"
+  - "Source/Module/Swipe.js"
 
 author: Noritaka Horio
 
