@@ -22,6 +22,7 @@ window.addEvent('load', function(){
 			message = (isAdded) ? 'assert ok' : 'filter is added';
 
 			log(message);
+			p.start();
 		}
 	});
 	b.execute(p);

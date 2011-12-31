@@ -1,6 +1,6 @@
 /*
 ---
-name: Bootstrap.Controller
+name: Bootstrap.Page
 
 description: 
 
