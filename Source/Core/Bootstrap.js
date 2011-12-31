@@ -2,7 +2,7 @@
 ---
 name: Bootstrap
 
-description: 
+description: Core module of bootstrap 
 
 license: MIT-style
 

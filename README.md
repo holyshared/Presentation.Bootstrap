@@ -2,6 +2,9 @@
 Presentation.Bootstrap
 =======================================
 
+It is an initialization library which helps initialization of **Presentation.js**. 
+If this library is used, **Presentation.js** can be initialized freely. 
+Initialization processing can also be added to a module.
 
 ### Default modules
 
@@ -41,11 +44,11 @@ Original initialization processing is applicable by defining initialization proc
 				],
 	
 				//Helper custum configuration
-				helpers: {
-					keyboard: {
-						prev: ['left', 'j'],
-						next: ['right', 'k']
-					}
+				keyboard: {
+					prev: ['left', 'j'],
+					next: ['right', 'k'],
+					first: ['0'],
+					last: ['4']
 				}
 			},
 			onSuccess: function(){

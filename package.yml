@@ -2,7 +2,7 @@ name: "Presentation.Bootstrap"
 
 web: "[http://sharedhat.com](http://sharedhat.com)"
 
-description: ""
+description: "The initialization library which helps initialization of Presentation"
 
 authors: "[Noritaka Horio](http://sharedhat.com)"
 

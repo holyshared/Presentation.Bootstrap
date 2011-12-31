@@ -2,7 +2,7 @@
 ---
 name: Bootstrap.Page
 
-description: 
+description: The module which carries out initial setting of the page helper
 
 license: MIT-style
 

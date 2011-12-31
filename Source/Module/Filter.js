@@ -2,7 +2,7 @@
 ---
 name: Bootstrap.Filter
 
-description: 
+description: The module which carries out initial setting of the filter
 
 license: MIT-style
 

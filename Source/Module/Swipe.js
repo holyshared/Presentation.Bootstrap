@@ -2,7 +2,7 @@
 ---
 name: Bootstrap.Swipe
 
-description: 
+description: The module which carries out initial setting of the swipe helper
 
 license: MIT-style
 

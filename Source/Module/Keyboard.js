@@ -2,7 +2,7 @@
 ---
 name: Bootstrap.Keyboard
 
-description: 
+description: The module which carries out initial setting of the keyboard helper
 
 license: MIT-style
 

@@ -2,7 +2,7 @@
 ---
 name: Bootstrap.Controller
 
-description: 
+description: The module which carries out initial setting of the controller helper
 
 license: MIT-style
 
