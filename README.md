@@ -67,51 +67,51 @@ Original initialization processing is applicable by defining initialization proc
 In order to add initialization processing, it adds using the register method of **Presentation.Bootstrap.Module**.  
 A title, initial setting, and the processing to perform are specified. 
 
-(function(Module){
-
-	/*
-		var bootstrap = new Moostrap('sync', Presentation.Bootstrap.Module, {
-			configurations: {
-				custum: {
-					key1: 'custum value1',
-					key2: 'custum value2'
-				}
-			}
-		});
-		bootstrap.execute(presentation);
-	*/
-	Module.register('custum', {
-
-		title: 'setup of custum helper',
-
-		//default configuration
-		configuration: {
-			key1: 'value1',
-			key2: 'value2'
-		},
-
-		handler: function(presentation, configuration){
-			var bootstrapper = this;
-
-			if (!Type.isObject(configuration)){
-				bootstrapper.failure();
-				return;
-			}
-
-			try {
-				presentation.addHelper(new CustumHelper(configuration));
-			} catch(exception){
-				//Initialization went wrong.
-				throw exception;
-				bootstrapper.failure();
-			}
-			//Initialization was successful.
-			bootstrapper.success();
-		}
+	(function(Module){
 	
-	});
-
-}(Presentation.Bootstrap.Module));
+		/*
+			var bootstrap = new Moostrap('sync', Presentation.Bootstrap.Module, {
+				configurations: {
+					custum: {
+						key1: 'custum value1',
+						key2: 'custum value2'
+					}
+				}
+			});
+			bootstrap.execute(presentation);
+		*/
+		Module.register('custum', {
+	
+			title: 'setup of custum helper',
+	
+			//default configuration
+			configuration: {
+				key1: 'value1',
+				key2: 'value2'
+			},
+	
+			handler: function(presentation, configuration){
+				var bootstrapper = this;
+	
+				if (!Type.isObject(configuration)){
+					bootstrapper.failure();
+					return;
+				}
+	
+				try {
+					presentation.addHelper(new CustumHelper(configuration));
+				} catch(exception){
+					//Initialization went wrong.
+					throw exception;
+					bootstrapper.failure();
+				}
+				//Initialization was successful.
+				bootstrapper.success();
+			}
+		
+		});
+	
+	}(Presentation.Bootstrap.Module));
 
 The method of building
 ---------------------------------------
@@ -126,9 +126,9 @@ php packager build Presentation.Bootstrap/Filter > presentation-standard.js
 
 ### A helper module is included.
 
-php packager build Presentation.Bootstrap/Keyboard > presentation-standard.js
-php packager build Presentation.Bootstrap/Controller > presentation-standard.js
-php packager build Presentation.Bootstrap/Page > presentation-standard.js
+php packager build Presentation.Bootstrap/Keyboard > presentation-standard.js  
+php packager build Presentation.Bootstrap/Controller > presentation-standard.js  
+php packager build Presentation.Bootstrap/Page > presentation-standard.js  
 php packager build Presentation.Bootstrap/Swipe > presentation-standard.js
 
 ### All the modules are included.
