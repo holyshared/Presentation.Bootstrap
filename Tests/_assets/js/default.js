@@ -6,7 +6,7 @@ window.addEvent('load', function(){
 
 	var p = new Presentation(presentation);
 
-	var b = new Bootstrap('async', module, {
+	var b = new Bootstrap(Bootstrap.ASYNC_EXECUTER, module, {
 		onBeforeBootstrap: function(key, title, current, total){
 			log(current + '/' + total + ' ' + key + ' - ' + title + ' start');
 		},

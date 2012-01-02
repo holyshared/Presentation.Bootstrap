@@ -11,7 +11,7 @@ window.addEvent('load', function(){
 		}
 	};
 
-	var b = new Bootstrap('async', module, {
+	var b = new Bootstrap(Bootstrap.ASYNC_EXECUTER, module, {
 		configurations: {
 			filters: [filter]
 		},
