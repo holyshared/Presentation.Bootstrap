@@ -33,7 +33,7 @@ Original initialization processing is applicable by defining initialization proc
 	
 		var presentation = new Presentation(element);
 	
-		var bootstrapper = new Bootstrap('async', module, {
+		var bootstrapper = new Bootstrap(Bootstrap.ASYNC_EXECUTER, module, {
 			configurations: {
 				//Filter custum configuration
 				//@see Presentation.js filter guide line.
@@ -70,7 +70,7 @@ A title, initial setting, and the processing to perform are specified.
 	(function(Module){
 	
 		/*
-			var bootstrap = new Moostrap('sync', Presentation.Bootstrap.Module, {
+			var bootstrap = new Moostrap(Moostrap.SYNC_EXECUTER, Presentation.Bootstrap.Module, {
 				configurations: {
 					custum: {
 						key1: 'custum value1',
