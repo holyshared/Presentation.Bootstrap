@@ -9,10 +9,12 @@ window.addEvent('load', function(){
 	var b = new Bootstrap(Bootstrap.ASYNC_EXECUTER, module, {
 		configurations: {
 			keyboard: {
-				prev: ['left', 'j'],
-				next: ['right', 'k'],
-				first: ['0'],
-				last: ['4']
+				keybinds: {
+					prev: ['left', 'j'],
+					next: ['right', 'k'],
+					first: ['0'],
+					last: ['4']
+				}
 			}
 		},
 		onBeforeBootstrap: function(key, title, current, total){
